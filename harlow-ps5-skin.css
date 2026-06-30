@@ -1,29 +1,3 @@
-/* ============================================================
-   "HARLOW" Custom PS5 Skin — for GamePad Viewer (app.gpv.gg)
-   ============================================================
-
-   HOW TO USE:
-   1. Host "harlow-ps5-skin.png" somewhere public (Imgur, GitHub Pages,
-      Discord CDN, your own server, etc). It MUST be a direct image link
-      (right-click > "Copy Image Address" should end in .png).
-   2. Replace YOUR_IMAGE_URL_HERE below with that direct link.
-   3. Host this .css file too (same way), or paste its contents into
-      OBS's "Custom CSS" box on the Browser Source if you're using OBS.
-   4. Go to https://app.gpv.gg/?p=1&css=YOUR_CSS_URL_HERE
-      (use the "Custom CSS URL" field on the Generate URL page, with
-      Player set to 1, and no skin id needed — custom css overrides it)
-
-   Native size of the art is 1295x722px. If it's too big on your
-   stream, add &sc=0.5 (or any decimal) to the URL to scale it down,
-   e.g.  ?p=1&css=YOUR_CSS_URL&sc=0.45
-
-   All button hitboxes below are invisible until pressed, then they
-   bloom with a red glow to match the design instead of using sprite
-   swaps — since the artwork itself already has the buttons drawn on
-   it (D-Pad, △ □ ○ ✕). This keeps the static art crisp while still
-   giving you live visual feedback.
-   ============================================================ */
-
 .controller.custom {
   position: relative;
   width: 1295px;
