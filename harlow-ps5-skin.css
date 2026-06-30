@@ -1,0 +1,184 @@
+/* ============================================================
+   "HARLOW" Custom PS5 Skin — for GamePad Viewer (app.gpv.gg)
+   ============================================================
+
+   HOW TO USE:
+   1. Host "harlow-ps5-skin.png" somewhere public (Imgur, GitHub Pages,
+      Discord CDN, your own server, etc). It MUST be a direct image link
+      (right-click > "Copy Image Address" should end in .png).
+   2. Replace YOUR_IMAGE_URL_HERE below with that direct link.
+   3. Host this .css file too (same way), or paste its contents into
+      OBS's "Custom CSS" box on the Browser Source if you're using OBS.
+   4. Go to https://app.gpv.gg/?p=1&css=YOUR_CSS_URL_HERE
+      (use the "Custom CSS URL" field on the Generate URL page, with
+      Player set to 1, and no skin id needed — custom css overrides it)
+
+   Native size of the art is 1295x722px. If it's too big on your
+   stream, add &sc=0.5 (or any decimal) to the URL to scale it down,
+   e.g.  ?p=1&css=YOUR_CSS_URL&sc=0.45
+
+   All button hitboxes below are invisible until pressed, then they
+   bloom with a red glow to match the design instead of using sprite
+   swaps — since the artwork itself already has the buttons drawn on
+   it (D-Pad, △ □ ○ ✕). This keeps the static art crisp while still
+   giving you live visual feedback.
+   ============================================================ */
+
+.controller.custom {
+  position: relative;
+  width: 1295px;
+  height: 722px;
+  background: url(https://cdn.discordapp.com/attachments/1293340603614101525/1521658929971466373/harlow-ps5-skin.png?ex=6a45a2cf&is=6a44514f&hm=35e99144b4f2e6d08ac23f8e36411e986d1856af60ac7d701bbfe8d9a63d3264&) no-repeat center center;
+  background-size: contain;
+  overflow: visible;
+}
+
+.custom.disconnected {
+  filter: grayscale(1) brightness(0.5);
+}
+
+.custom.disconnected div {
+  display: none;
+}
+
+/* hide the player-number quadrant indicator, no asset for it in this skin */
+.custom .quadrant {
+  display: none;
+}
+
+/* ---------- shared glow effect for any pressed element ---------- */
+.custom .button.pressed,
+.custom .face.pressed,
+.custom .bumper.pressed,
+.custom .back.pressed,
+.custom .start.pressed,
+.custom .stick.pressed {
+  background: radial-gradient(circle, rgba(255,30,40,0.55) 0%, rgba(255,0,0,0) 72%);
+  box-shadow:
+    0 0 18px 6px rgba(255,20,30,0.85),
+    0 0 45px 18px rgba(255,20,30,0.35);
+  border-radius: 50%;
+}
+
+/* ================= D-PAD ================= */
+.custom .dpad {
+  position: static;
+}
+
+.custom .face {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+}
+
+.custom .face.up    { left: 222px; top: 138px; }
+.custom .face.down  { left: 222px; top: 258px; }
+.custom .face.left  { left: 162px; top: 198px; }
+.custom .face.right { left: 284px; top: 198px; }
+
+/* ================= FACE BUTTONS (△ □ ○ ✕) ================= */
+.custom .abxy {
+  position: static;
+}
+
+.custom .button {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+}
+
+.custom .y { left: 998px;  top: 111px; } /* Triangle */
+.custom .x { left: 906px;  top: 201px; } /* Square   */
+.custom .b { left: 1088px; top: 201px; } /* Circle   */
+.custom .a { left: 998px;  top: 294px; } /* Cross    */
+
+/* ================= ANALOG STICKS (L3 / R3) ================= */
+.custom .sticks {
+  position: static;
+}
+
+.custom .stick {
+  position: absolute;
+  width: 114px;
+  height: 114px;
+}
+
+.custom .stick.left  { left: 380px; top: 353px; }
+.custom .stick.right { left: 780px; top: 353px; }
+
+/* ================= BUMPERS L1 / R1 ================= */
+.custom .bumpers {
+  position: static;
+}
+
+.custom .bumper {
+  position: absolute;
+  width: 150px;
+  height: 42px;
+  border-radius: 30px;
+}
+
+.custom .bumper.left  { left: 180px; top: -4px; }
+.custom .bumper.right { left: 965px; top: -4px; }
+
+/* ================= TRIGGERS L2 / R2 (analog) ================= */
+/* Opacity for these is driven live by the gamepad library based on
+   how far the trigger is pulled — we just style the glow color. */
+.custom .triggers {
+  position: static;
+}
+
+.custom .trigger {
+  position: absolute;
+  width: 150px;
+  height: 36px;
+  top: -34px;
+  background: radial-gradient(circle, rgba(255,30,30,0.95) 0%, rgba(255,0,0,0) 75%);
+  border-radius: 30px;
+}
+
+.custom .trigger.left  { left: 180px; }
+.custom .trigger.right { left: 965px; }
+
+/* ================= SHARE / OPTIONS (back / start) ================= */
+.custom .arrows {
+  position: static;
+}
+
+.custom .back,
+.custom .start {
+  position: absolute;
+  width: 34px;
+  height: 70px;
+  border-radius: 18px;
+}
+
+.custom .back  { left: 348px; top: 60px; } /* Share / Create  */
+.custom .start { left: 913px; top: 60px; } /* Options         */
+
+/* ================= PS BUTTON & TOUCHPAD (if present) ================= */
+.custom .ps {
+  position: absolute;
+  left: 610px;
+  top: 385px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.custom .touchpad {
+  position: absolute;
+  left: 575px;
+  top: 458px;
+  width: 140px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.custom .ps.pressed,
+.custom .touchpad.pressed {
+  background: radial-gradient(circle, rgba(255,30,40,0.55) 0%, rgba(255,0,0,0) 72%);
+  box-shadow:
+    0 0 18px 6px rgba(255,20,30,0.85),
+    0 0 45px 18px rgba(255,20,30,0.35);
+}
