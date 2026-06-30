@@ -2,7 +2,7 @@
   position: relative;
   width: 1295px;
   height: 722px;
-  background: url(https://github.com/yykody/harlows-css-ps5-controller/blob/main/harlow-ps5-skin.png?raw=true) no-repeat center center;
+  background: url(https://raw.githubusercontent.com/yykody/harlows-css-ps5-controller/main/harlow-ps5-skin.png) no-repeat center center;
   background-size: contain;
   overflow: visible;
 }
