@@ -1,0 +1,34 @@
+/* Harlow PS5 Skin - Rewritten starter
+   Replace your existing CSS with this base.
+*/
+body{overflow:visible!important;}
+.controller.custom{
+ position:relative;
+ width:1295px;
+ height:722px;
+ overflow:visible!important;
+ background:url("https://raw.githubusercontent.com/yykody/harlows-css-ps5-controller/main/harlow-ps5-skin.png") center center/contain no-repeat;
+}
+.controller.custom *{box-sizing:border-box}
+.custom .quadrant{display:none}
+.custom .sticks{position:absolute;inset:0}
+.custom .stick{
+ position:absolute;
+ width:118px;height:118px;
+ background-size:contain;
+ background-repeat:no-repeat;
+ background-position:center;
+ border-radius:50%;
+ z-index:30;
+}
+.custom .stick.left{
+ left:324px;top:82px;
+ background-image:url("https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlows-stick-left.png");
+}
+.custom .stick.right{
+ left:851px;top:82px;
+ background-image:url("https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlows-stick-right.png");
+}
+.custom .dpad,.custom .abxy,.custom .bumpers,.custom .triggers,.custom .arrows{position:static}
+.custom .face,.custom .button,.custom .bumper,.custom .trigger,.custom .back,.custom .start,.custom .ps,.custom .touchpad{position:absolute}
+.custom .touchpad{background:transparent}
