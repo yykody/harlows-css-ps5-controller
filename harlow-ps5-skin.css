@@ -26,8 +26,8 @@
 
 .controller.custom {
   position: relative;
-  width: 1920px;
-  height: 1080px;
+  width: 1295px;
+  height: 722px;
   background: url(https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlow-ps5-skin.png) no-repeat center center;
   background-size: contain;
   overflow: visible;
