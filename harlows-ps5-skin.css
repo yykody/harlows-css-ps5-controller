@@ -3,7 +3,7 @@
    ============================================================
 
    HOW TO USE:
-   1. Host "harlow-ps5-skin.png" somewhere public (Imgur, GitHub Pages,
+   1. Host "harlows-ps5-skin.png" somewhere public (Imgur, GitHub Pages,
       Discord CDN, your own server, etc). It MUST be a direct image link
       (right-click > "Copy Image Address" should end in .png).
    2. Replace YOUR_IMAGE_URL_HERE below with that direct link.
@@ -28,7 +28,7 @@
   position: relative;
   width: 1920px;
   height: 1080px;
-  background: url(https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlow-ps5-skin.png) no-repeat center center;
+  background: url(https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlows-ps5-skin.png) no-repeat center center;
   background-size: contain;
   overflow: visible;
 }
@@ -115,13 +115,13 @@
 .custom .stick.left {
   left: 385px;
   top: 343px;
-  background-image: url(https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlow-stick-left.png);
+  background-image: url(https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlows-stick-left.png);
 }
 
 .custom .stick.right {
   left: 788px;
   top: 347px;
-  background-image: url(https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlow-stick-right.png);
+  background-image: url(https://cdn.jsdelivr.net/gh/yykody/harlows-css-ps5-controller/harlows-stick-right.png);
 }
 
 /* ================= BUMPERS L1 / R1 ================= */
